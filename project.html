@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="project.css" />
+  </head>
+  <body>
+    <div id="content">
+      <input id="randomBtn" type="button" value="랜덤선택" />
+      <h1 id="text">오늘의 메뉴 : 케이크</h1>
+      <div id="list">
+        <img src="./cake.jpg" alt="케이크" />
+      </div>
+      <div id="lists">
+        <div id="caimg">
+          <img src="./cake.jpg" alt="케이크" />
+        </div>
+        <div id="saimg">
+          <img src="./sandwich.jpg" alt="샌드위치" />
+        </div>
+        <div id="buimg">
+          <img src="./burger.jpg" alt="햄버거" />
+        </div>
+        <div id="stimg">
+          <img src="./steak.jpg" alt="스테이크" />
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    let listDiv = document.querySelector("#list");
+    let text = document.querySelector("#text");
+
+    let caimg = document.querySelector("#caimg");
+    caimg.addEventListener("click", function () {
+      listDiv.innerHTML = "";
+      let cImg = document.createElement("img");
+      cImg.setAttribute("src", "./cake.jpg");
+      cImg.setAttribute("width", 200);
+      cImg.setAttribute("height", 200);
+      listDiv.append(cImg);
+      text.innerText = "오늘의 메뉴 : 케이크";
+    });
+    let saimg = document.querySelector("#saimg");
+    saimg.addEventListener("click", function () {
+      listDiv.innerHTML = "";
+      let sImg = document.createElement("img");
+      sImg.setAttribute("src", "./sandwich.jpg");
+      sImg.setAttribute("width", 200);
+      sImg.setAttribute("height", 200);
+      listDiv.append(sImg);
+      text.innerText = "오늘의 메뉴 : 샌드위치";
+    });
+    let buimg = document.querySelector("#buimg");
+    buimg.addEventListener("click", function () {
+      listDiv.innerHTML = "";
+      let bImg = document.createElement("img");
+      bImg.setAttribute("src", "./burger.jpg");
+      bImg.setAttribute("width", 200);
+      bImg.setAttribute("height", 200);
+      listDiv.append(bImg);
+      text.innerText = "오늘의 메뉴 : 햄버거";
+    });
+    let stimg = document.querySelector("#stimg");
+    stimg.addEventListener("click", function () {
+      listDiv.innerHTML = "";
+      let stImg = document.createElement("img");
+      stImg.setAttribute("src", "./steak.jpg");
+      stImg.setAttribute("width", 200);
+      stImg.setAttribute("height", 200);
+      listDiv.append(stImg);
+      text.innerText = "오늘의 메뉴 : 스테이크";
+    });
+
+    let randomBtn = document.querySelector("#randomBtn");
+    randomBtn.addEventListener("click", function () {
+      let imgArr = [
+        "./cake.jpg",
+        "./sandwich.jpg",
+        "./burger.jpg",
+        "./steak.jpg",
+      ];
+      listDiv.innerHTML = "";
+      let num = Math.floor(Math.random() * 4);
+      let randomImg = document.createElement("img");
+      randomImg = document.createElement("img");
+      randomImg.setAttribute("src", imgArr[num]);
+      randomImg.setAttribute("width", 200);
+      randomImg.setAttribute("height", 200);
+      listDiv.append(randomImg);
+      if (num == 0) text.innerText = "오늘의 메뉴 : 케이크";
+      else if (num == 1) text.innerText = "오늘의 메뉴 : 샌드위치";
+      else if (num == 2) text.innerText = "오늘의 메뉴 : 햄버거";
+      else text.innerText = "오늘의 메뉴 : 스테이크";
+    });
+  </script>
+</html>
