@@ -9,4 +9,4 @@
   display:block, margin:auto를 사용하여 사진을 가운데 정렬함. 
 * Math.floor(Math.random()*4)를 사용하여 0~3까지의 랜덤한 숫자를 나오게 하였다. 랜덤한 숫자는 imgArr라는 리스트의 index에 해당하며, 리스트의 값은 음식 이미지의 src 위치값을 담고 있다. setAttribute로 이미지 주소, 이미지 크기를 지정 후 listDiv에 append하여 특정 공간에 이미지 출력.
 * text.innerText를 사용하여 클릭 이벤트 발생시에 text값도 변경해준다.
-* img의 opacity(불투명도)를 0.5로하여 불투명한 상태로 만들었다. hover는 마우스를 올렸을때 효과를 줄수 있는 기능으로 opacity를 1로 지정하여 음식 사진이 투명해지도록 하였다. 또한, hover에 boader : 10px solid color를 지정하여 이미지 사진에 테두리 생성기능 구현, justify-content:space-around를 적용하여 가로축 여백을 균일하게 사용하는 flex 기능 활용.
+* img의 opacity(불투명도)를 0.5로하여 불투명한 상태로 만들었다. hover는 마우스를 올렸을 때 효과를 줄수 있는 기능으로 opacity를 1로 지정하여 음식 사진이 선명해지도록 하였다.(불투명도 제거) 또한, hover에 boader : 10px solid color를 지정하여 이미지 사진에 테두리 생성기능 구현, justify-content:space-around를 적용하여 가로축 여백을 균일하게 사용하는 flex 기능 활용.
